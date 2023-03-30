@@ -17,7 +17,9 @@ const Dice = () => {
         if(allHeld && sameAllValues) {
             console.log("You won")
             setTenzies(true)
-        }
+        } 
+           
+        
     }, [dice])
     
     const holdDice = (id) => {
@@ -54,18 +56,24 @@ const Dice = () => {
 				id: nanoid(),
 			}
         }));
-        
 	}
+
+    function newGame() {
+        setDice(randomDices)
+        setTenzies(false)
+    }
+
+    console.log(tenzies);
 
 	return (
 		<div>
+            {tenzies && <Confetti />}
 			<div className='num-container'>
                 {diceELements}
                 </div>
-			<button className='game-btn' onClick={rollDice}>
+			<button className='game-btn' onClick={tenzies ? newGame : rollDice}>
 				{tenzies ? "New Game" : "Roll"}
 			</button>
-            {tenzies && <Confetti />}
 		</div>
 	);
 };
