@@ -1,0 +1,99 @@
+.num-square {
+    width: 3em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+
+/* import React from 'react';
+import './GameBox.css';
+import Dice from './Dice';
+import { nanoid } from 'nanoid';
+
+const GameBox = () => {
+    const [dice, setDice] = React.useState(randomDices());
+
+    const holdDice = (id) => {
+        setDice(prevState => prevState.map(el => {
+            return el.id === id ? {...el, isHeld: !el.isHeld} : el
+        }))
+        console.log(id);
+    }
+    
+
+	const diceELements = dice.map((num) => (
+        <Dice 
+            key={num.id}
+            isHeld={num.isHeld}
+            holdDice={() => holdDice(num.id)}
+            value={num.value}
+        />
+	));
+    
+
+	function randomDices() {
+		const newArray = [];
+		for (let i = 0; i < 10; i++) {
+			newArray.push({
+				value: Math.ceil(Math.random() * 6),
+				isHeld: false,
+				id: nanoid(),
+			});
+		}
+		return newArray;
+	}
+
+	function rollDice() {
+		setDice(randomDices());
+	}
+	return (
+		<div className='container'>
+			<div className='game-container'>
+				<h1>Tenzies</h1>
+				<p>
+					Roll untill all dice are the same. Click each die to freeze it at its
+					current value between rolls.
+				</p>
+				<div className='num-container'>{diceELements}</div>
+				<button className='game-btn' onClick={rollDice}>
+				Roll
+			</button>
+			</div>
+		</div>
+	);
+};
+
+export default GameBox; */
+
+
+/* 
+import React from 'react';
+import './Dice.css';
+
+const Dice = (props) => {
+	const styles = {
+		backgroundColor: props.isHeld === true ? '#59E391' : '#ddd',
+	};
+
+
+	return (
+		<div>
+			<h2 
+            className='num-square' 
+            style={styles} 
+            onClick={props.holdDice}
+            >
+			{props.value}
+			</h2>
+		</div>
+	);
+};
+
+export default Dice; */
